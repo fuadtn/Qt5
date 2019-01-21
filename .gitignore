@@ -3,8 +3,8 @@
 # Edit at https://www.gitignore.io/?templates=qt,c++,windows
 
 # Dir
-debug/
-release/
+*/debug/
+*/release/
 
 
 ### C++ ###
