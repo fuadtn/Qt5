@@ -1,3 +1,4 @@
+### Qt5 static library for HTTP requests with authorization by token.
 
 ```c++
 int Auth(const QString url, const QString username, const QString password);
