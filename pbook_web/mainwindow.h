@@ -35,8 +35,6 @@
 #define MAINWINDOW_HEIGHT       600
 #define OUTPUT_MAX_LENGTH       24                      // максимальное количество символов в строке + 3 точки
 
-#define PHONEBOOK_SERVER_URL    "http://www.kikzavod.kandk.ru/php/app/db/phonebook.php/"
-#define PHONEBOOK_MAIL_URL      "http://www.kikzavod.kandk.ru/php/app/db/phonebook_mail.php/"
 #define CHANGEBTN_Y_PBOOK       -6
 #define CHANGEBTN_Y_BDAY        21
 #define CHANGEBTN_Y_SET         48
