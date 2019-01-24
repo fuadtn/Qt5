@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>pbook.ico</file>
+        <file>ico/max.png</file>
+        <file>ico/min.png</file>
+        <file>ico/quit.png</file>
+        <file>ico/top.png</file>
+        <file>ico/top_orange.png</file>
+        <file>ico/logo.png</file>
+        <file>ico/change7.png</file>
+        <file>ico/max50.png</file>
+        <file>ico/min50.png</file>
+        <file>ico/quit50.png</file>
+        <file>ico/top50.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>320</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>128</width>
+    <height>125</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLineEdit" name="searchEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>271</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#searchEdit {
+	background-color: #474548;
+	border: 1px solid #646464;
+	color: white;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+QMenu {
+	color: #2f2f2e;
+	background: #ffffff;
+}
+
+QMenu::item:selected {
+    background-color: #eeeeee;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="logoLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	background-color: transparent;
+	border: none;
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="quitButton">
+    <property name="geometry">
+     <rect>
+      <x>295</x>
+      <y>10</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border-image: url(&quot;:/ico/quit.png&quot;);
+	outline: none;
+}
+
+QPushButton:hover {
+	border-image: url(&quot;:/ico/quit50.png&quot;);
+}
+
+QPushButton:pressed {
+	border-image: url(&quot;:/ico/quit.png&quot;);
+}
+
+QToolTip {
+	background: white;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="minButton">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>10</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border-image: url(&quot;:/ico/min.png&quot;);
+	outline: none;
+}
+
+QPushButton:hover {
+	border-image: url(&quot;:/ico/min50.png&quot;);
+}
+
+QPushButton:pressed {
+	border-image: url(&quot;:/ico/min.png&quot;);
+}
+
+QToolTip {
+	background: white;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="topButton">
+    <property name="geometry">
+     <rect>
+      <x>216</x>
+      <y>9</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border-image: url(&quot;:/ico/top.png&quot;);
+	outline: none;
+}
+
+QPushButton:hover {
+	border-image: url(&quot;:/ico/top50.png&quot;);
+}
+
+QToolTip {
+	background: white;
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="maxButton">
+    <property name="geometry">
+     <rect>
+      <x>268</x>
+      <y>10</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border-image: url(&quot;:/ico/max.png&quot;);
+	outline: none;
+}
+
+QPushButton:hover {
+	border-image: url(&quot;:/ico/max50.png&quot;);
+}
+
+QPushButton:pressed {
+	border-image: url(&quot;:/ico/max.png&quot;);
+}
+
+QToolTip {
+	background: white;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="listBrowser">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>301</width>
+      <height>481</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget {
+	color: white;
+	border: none;
+}
+
+QScrollArea {
+	border: none;
+}
+
+QScrollBar:vertical {
+	border: none;
+	border-left: 10px solid #2f2f2e;
+    background: #1f1d1e;
+    width: 22px;
+    margin: 0;
+}
+  
+QScrollBar::handle:vertical {
+	background: #f7a01a;
+    min-height: 20px;
+}
+
+QScrollBar::add-line:vertical {
+	border: none;
+    height: 0;
+}
+
+QScrollBar::sub-line:vertical {
+	border: none;
+    height: 0;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+	background: none;
+}
+
+QToolTip {
+	background: white;
+}
+
+QMenu {
+	color: #2f2f2e;
+	background: #ffffff;
+}
+
+QMenu::item:selected {
+    background-color: #eeeeee;
+}</string>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOn</enum>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>261</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCheckBox {
+	border: none;
+	color: #474548;
+
+}
+
+QCheckBox::indicator:unchecked {
+	background: #474548;
+	width: 10px;
+	height: 10px;
+}
+
+QCheckBox::indicator:checked {
+    background: #f7a01a;
+	width: 10px;
+	height: 10px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Контакты без телефонных номеров исключены</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>0</y>
+      <width>31</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	background: #2f2f2e;
+	border: none;
+	border-bottom: 1px solid #646464;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>80</y>
+      <width>31</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	background: #2f2f2e;
+	border: none;
+	border-top: 1px solid #646464;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="changeButton">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>-10</y>
+      <width>31</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-image: url(&quot;:/ico/change7.png&quot;);
+	background-position: center;
+	border: none;	
+	border-left: 1px solid #646464;
+	border-right: 1px solid #646464;
+	outline: none;
+}
+
+QToolTip {
+	background: white;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="editName">
+    <property name="geometry">
+     <rect>
+      <x>24</x>
+      <y>121</y>
+      <width>211</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	border-bottom: 1px solid #ffffff;
+	color: #ffffff;
+}
+
+QMenu {
+	color: #2f2f2e;
+	background: #ffffff;
+}
+
+QMenu::item:selected {
+    background-color: #eeeeee;
+}</string>
+    </property>
+    <property name="maxLength">
+     <number>100</number>
+    </property>
+    <property name="placeholderText">
+     <string>ФИО</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelSet1">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>120</y>
+      <width>281</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	border: none;
+	color: #ffffff;
+}</string>
+    </property>
+    <property name="text">
+     <string>Я,                                                      , прошу</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelSet2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>281</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: #ffffff;
+	border: none;
+}</string>
+    </property>
+    <property name="text">
+     <string>обновить информацию обо мне на следующую:</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="editData">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>180</y>
+      <width>271</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextEdit {
+	color: #ffffff;
+	border: 1px solid #ffffff;
+}
+
+QScrollArea {
+	border: none;
+}
+
+QScrollBar:vertical {
+	border: none;
+	border-left: 10px solid #2f2f2e;
+    background: #1f1d1e;
+    width: 22px;
+    margin: 0;
+}
+  
+QScrollBar::handle:vertical {
+	background: #f7a01a;
+    min-height: 20px;
+}
+
+QScrollBar::add-line:vertical {
+	border: none;
+    height: 0;
+}
+
+QScrollBar::sub-line:vertical {
+	border: none;
+    height: 0;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+	background: none;
+}
+
+QMenu {
+	color: #2f2f2e;
+	background: #ffffff;
+}
+
+QMenu::item:selected {
+    background-color: #eeeeee;
+}</string>
+    </property>
+    <property name="placeholderText">
+     <string>тел.: 2732-000 e-mail: name@kandk.ru</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="setButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>260</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border: 1px solid #ffffff;
+	color: #ffffff;
+}
+
+QPushButton::hover {
+	background: #474548;
+}
+
+QPushButton::pressed {
+	background: #2f2f2e;
+}</string>
+    </property>
+    <property name="text">
+     <string>ОТПРАВИТЬ</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelSetStatus">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>300</y>
+      <width>271</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	border: none;
+	color: #f7a01a;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="exportToExcelBtn">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>570</y>
+      <width>261</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	color: #f7a01a;
+	text-decoration: underline;
+	border: none;
+	outline: none;
+}
+
+QPushButton:hover {
+	color: #e7900a;	
+}</string>
+    </property>
+    <property name="text">
+     <string>Экспортировать контакты на рабочий стол (.xlsx)</string>
+    </property>
+   </widget>
+   <zorder>changeButton</zorder>
+   <zorder>label</zorder>
+   <zorder>searchEdit</zorder>
+   <zorder>logoLabel</zorder>
+   <zorder>checkBox</zorder>
+   <zorder>minButton</zorder>
+   <zorder>topButton</zorder>
+   <zorder>label_2</zorder>
+   <zorder>quitButton</zorder>
+   <zorder>maxButton</zorder>
+   <zorder>listBrowser</zorder>
+   <zorder>labelSet1</zorder>
+   <zorder>editName</zorder>
+   <zorder>labelSet2</zorder>
+   <zorder>editData</zorder>
+   <zorder>setButton</zorder>
+   <zorder>labelSetStatus</zorder>
+   <zorder>exportToExcelBtn</zorder>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
